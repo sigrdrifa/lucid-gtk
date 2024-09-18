@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox" id="encTopBox">
+    <property name="orientation">1</property>
+    <child>
+      <object class="AdwBanner" id="banner">
+        <property name="button-label" translatable="true">Cheatsheet</property>
+        <property name="title" translatable="true">Use the input on the left to convert your HTML5 code to Lucid Haskell code </property>
+        <property name="revealed">true</property>
+      </object>
+    </child>
+    <child>
+      <object class="AdwClamp" id="encTopClamp">
+        <property name="maximum-size">1000</property>
+        <property name="tightening-threshold">200</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">1</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="margin-bottom">10</property>
+                <property name="use-markup">true</property>
+                <property name="label"></property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="encFileTopBox">
+                <property name="spacing">15</property>
+                <property name="homogeneous">true</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">6</property>
+                    <property name="orientation">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="true">HTML5 code input</property>
+                        <style>
+                          <class name="title-4"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="true">Enter your complete HTML5 code here</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="margin-bottom">5</property>
+                        <property name="margin-top">5</property>
+                        <property name="propagate-natural-height">true</property>
+                        <child>
+                          <object class="GtkTextView" id="htmlTextView">
+                            <property name="height-request">500</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="spacing">5</property>
+                        <property name="margin-top">10</property>
+                        <property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="runConvertBtn">
+                            <property name="label">Convert Code</property>
+                            <style>
+                              <class name="success"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">6</property>
+                    <property name="orientation">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="true">Lucid Haskell code</property>
+                        <style>
+                          <class name="title-4"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="true">The generated result code</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="margin-bottom">5</property>
+                        <property name="margin-top">5</property>
+                        <property name="propagate-natural-height">true</property>
+                        <child>
+                          <object class="GtkTextView" id="lucidTextView">
+                            <property name="height-request">500</property>
+                            <property name="editable">false</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="spacing">5</property>
+                        <property name="margin-top">10</property>
+                        <property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="doCopyResult">
+                            <property name="label">Copy result to Clipboard</property>
+                            <style></style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparator">
+                <property name="margin-top">25</property>
+                <property name="margin-bottom">25</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">&lt;b&gt;Debug Output&lt;/b&gt;</property>
+                <property name="use-markup">true</property>
+                <style>
+                  <class name="title-5"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="output_scrolled_window">
+                <property name="margin-top">15</property>
+                <property name="height-request">150</property>
+                <child>
+                  <object class="GtkTextView" id="outputTextView">
+                    <property name="bottom-margin">12</property>
+                    <property name="left-margin">12</property>
+                    <property name="right-margin">12</property>
+                    <property name="top-margin">12</property>
+                    <property name="editable">false</property>
+                    <property name="cursor-visible">true</property>
+                    <property name="wrap-mode">1</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

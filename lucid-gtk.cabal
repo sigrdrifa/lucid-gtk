@@ -66,5 +66,6 @@ executable lucid-gtk-ui
       , gi-gobject
       , gi-gio
       , text
+      , gi-gtksource
       , haskell-gi-base
 

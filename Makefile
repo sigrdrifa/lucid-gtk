@@ -4,7 +4,7 @@ help: ## print make targets
 
 .PHONY: build
 build: ## builds the project with cabal
-	cabal build lucid.-gtk-ui
+	cabal build lucid-gtk-ui
 
 .PHONY: run
 run:  ## runs the project with cabal
@@ -17,3 +17,21 @@ test: ## runs the unit test project
 .PHONY: generate-resources
 generate-resources: ## generates the resources file
 	sh compile-resources.sh
+
+.PHONY: clean
+clean: ## cleans the project
+	cabal clean
+	rm -rf dist
+	rm -rf csrc/resources.c
+
+.PHONY: haddock
+haddock: ## generates the haddock documentation
+	cabal haddock lucid-gtk-ui
+
+.PHONY: repl
+repl: ## starts the repl
+	cabal repl lucid-gtk-ui
+
+.PHONY: install
+install: ## installs the project
+	cabal install --overwrite-policy=always

@@ -235,9 +235,29 @@ lucidFromHtml :: HtmlVariant  -- ^ Variant to use
               -> Options      -- ^ Build options
               -> String       -- ^ Template name
               -> String       -- ^ HTML code
+              -> IO String       -- ^ Resulting code
+lucidFromHtml variant opts name code = do
+    let res = unlines . addSignature . fromHtml variant opts
+            . minimizeBlocks
+            . removeEmptyText   -- causes glueing of words, see bug #13 
+            . fst . makeTree variant (ignore_ opts) []
+            -- . canonicalizeTags
+            . parseTagsOptions parseOptions { optTagPosition = True}
+    pure (res code)
+  where
+    addSignature body = [ name ++ " :: Html ()"
+                        , name ++ " = do"
+                        ] ++ indent opts body
+
+
+
+lucidFromHtml' :: HtmlVariant  -- ^ Variant to use
+              -> Options      -- ^ Build options
+              -> String       -- ^ Template name
+              -> String       -- ^ HTML code
               -> String       -- ^ Resulting code
-lucidFromHtml variant opts name =
-    unlines . addSignature . fromHtml variant opts
+lucidFromHtml' variant opts name =
+          unlines . addSignature . fromHtml variant opts
             . minimizeBlocks
             . removeEmptyText   -- causes glueing of words, see bug #13 
             . fst . makeTree variant (ignore_ opts) []

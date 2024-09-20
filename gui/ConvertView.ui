@@ -12,7 +12,7 @@
     </child>
     <child>
       <object class="AdwClamp" id="encTopClamp">
-        <property name="maximum-size">1000</property>
+        <property name="maximum-size">1600</property>
         <property name="tightening-threshold">200</property>
         <child>
           <object class="GtkBox">
@@ -46,13 +46,14 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkScrolledWindow">
+                      <object class="GtkScrolledWindow" id="htmlTextViewWindow">
                         <property name="margin-bottom">5</property>
                         <property name="margin-top">5</property>
                         <property name="propagate-natural-height">true</property>
                         <child>
-                          <object class="GtkTextView" id="htmlTextView">
+                          <object class="GtkBox" id="htmlTextBox">
                             <property name="height-request">500</property>
+                            <property name="homogeneous">true</property>
                           </object>
                         </child>
                       </object>
@@ -92,14 +93,14 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkScrolledWindow">
+                      <object class="GtkScrolledWindow" id="hsTextViewWindow">
                         <property name="margin-bottom">5</property>
                         <property name="margin-top">5</property>
                         <property name="propagate-natural-height">true</property>
                         <child>
-                          <object class="GtkTextView" id="lucidTextView">
+                          <object class="GtkBox" id="hsTextBox">
                             <property name="height-request">500</property>
-                            <property name="editable">false</property>
+                            <property name="homogeneous">true</property>
                           </object>
                         </child>
                       </object>
@@ -117,38 +118,6 @@
                         </child>
                       </object>
                     </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkSeparator">
-                <property name="margin-top">25</property>
-                <property name="margin-bottom">25</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="label">&lt;b&gt;Debug Output&lt;/b&gt;</property>
-                <property name="use-markup">true</property>
-                <style>
-                  <class name="title-5"/>
-                </style>
-              </object>
-            </child>
-            <child>
-              <object class="GtkScrolledWindow" id="output_scrolled_window">
-                <property name="margin-top">15</property>
-                <property name="height-request">150</property>
-                <child>
-                  <object class="GtkTextView" id="outputTextView">
-                    <property name="bottom-margin">12</property>
-                    <property name="left-margin">12</property>
-                    <property name="right-margin">12</property>
-                    <property name="top-margin">12</property>
-                    <property name="editable">false</property>
-                    <property name="cursor-visible">true</property>
-                    <property name="wrap-mode">1</property>
                   </object>
                 </child>
               </object>

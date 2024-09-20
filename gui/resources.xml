@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/gui">
     <file preprocess="xml-stripblanks">ConvertView.ui</file>
+    <file preprocess="xml-stripblanks">vsdark.xml</file>
   </gresource>
 </gresources>

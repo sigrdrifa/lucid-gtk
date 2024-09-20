@@ -68,4 +68,5 @@ executable lucid-gtk-ui
       , text
       , gi-gtksource
       , haskell-gi-base
+      , mtl
 

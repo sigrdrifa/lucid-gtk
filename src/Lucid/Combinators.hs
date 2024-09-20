@@ -289,7 +289,10 @@ html5 = HtmlVariant
         "size", "sizes", "span"
         , "spellcheck", "src", "srcdoc", "start", "step", "style", "subject"
         , "summary", "tabindex", "target", "title", "type", "usemap", "value"
-        , "width", "wrap", "xmlns"
+        , "width", "wrap", "xmlns", "x-data", "x-scope", "@keydown.window.escape", "x-text",
+        "x-show", "x-description", "x-ref", "x-transition:enter", "x-transition:enter-start",
+        "x-transition:enter-end", "x-transition:leave", "x-transition:leave-start", "x-transition:leave-end",
+        "x-transition:enter-active", "x-transition:leave-active", "x-transition:move", "x-transition:move-start", "@click.away", "@click", "@click.outside", "x-state:on", "x-state:off", "x-state-description"
         ]
     , selfClosing = False
     }
@@ -310,3 +313,4 @@ html5SSan = html5 { parents = map sanitize (parents html5S)
                   , attributes = map sanitize (attributes html5S)
                   }
 -}
+

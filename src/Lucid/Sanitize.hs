@@ -19,12 +19,20 @@ Examples:
 -}
 sanitize :: String -> String
 sanitize str
+  | "x-transition" == lower = lower
+  | "x-transition:enter" == lower = "xTransitionEnter_"
+  | "x-transition:enter-start" == lower = "xTransitionEnterStart_"
+  | "x-transition:leave-start" == lower = "xTransitionLeaveStart_"
+  | "x-transition:leave" == lower = "xTransitionLeave_"
+  | "@keydown.widow.escape" == lower = "xKeyDownWindowEscape_"
   | "data-" `isPrefixOf` lower = lower
   -- begin hack for svg
   | str `elem` svgCamelCaseAttrs = str
   | ':' `elem` str =
       appendUnderscore $ removeColon lower
   -- end hack for svg
+  -- begin hack for x-transition
+  -- end hack for x-transition
   | otherwise =
       appendUnderscore $ removeDash lower
  where

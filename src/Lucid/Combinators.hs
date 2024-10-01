@@ -265,7 +265,7 @@ html5 = HtmlVariant
         , "form", "formaction", "formenctype", "formmethod", "formnovalidate"
         , "formtarget", "headers", "height", "hidden", "high", "href"
         , "hreflang", "http-equiv", "icon", "id", "ismap", "item", "itemprop"
-        , "keytype", "label", "lang", "list", "loop", "low", "manifest", "max"
+        , "keytype", "label", "lang", "list", "loop", "low", "manifest", "max", "fill-rule", "clip-rule"
         , "maxlength", "media", "method", "min", "multiple", "name"
         , "novalidate", "onbeforeonload", "onbeforeprint", "onblur", "oncanplay"
         , "oncanplaythrough", "onchange", "oncontextmenu", "onclick"

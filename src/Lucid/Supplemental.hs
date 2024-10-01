@@ -282,6 +282,12 @@ Declare a new Alpine component and its data for a block of HTML
 xData_ :: Text -> Attribute
 xData_ = makeAttribute "x-data"
 
+fillRule_ :: Text -> Attribute
+fillRule_ = makeAttribute "fill-rule"
+
+clipRule_ :: Text -> Attribute
+clipRule_ = makeAttribute "clip-rule"
+
 {-
 <div x-data="{ open: false }">
     ...

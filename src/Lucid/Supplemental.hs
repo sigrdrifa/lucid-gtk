@@ -80,6 +80,15 @@ tt_ = term "tt"
 svg_ :: (TermRaw arg result) => arg -> result
 svg_ = termRaw "svg"
 
+defs_ :: (TermRaw arg result) => arg -> result 
+defs_ = termRaw "defs"
+
+pattern_ :: (TermRaw arg result) => arg -> result
+pattern_ = termRaw "pattern"
+
+rect_ :: (TermRaw arg result) => arg -> result
+rect_ = termRaw "rect"
+
 ------ Leaf elements -----------------------
 -------------------------------------------
 
@@ -122,6 +131,12 @@ ariaHidden_ = makeAttribute "aria-hidden"
 ariaLabel_ :: Text -> Attribute
 ariaLabel_ = makeAttribute "aria-label"
 
+ariaCurrent_ :: Text -> Attribute
+ariaCurrent_ = makeAttribute "aria-current"
+
+ariaOrientation_ :: Text -> Attribute
+ariaOrientation_ = makeAttribute "aria-orientation"
+
 -- | The @aria-labelledby@ attribute for svg.
 ariaLabelledby_ :: Text -> Attribute
 ariaLabelledby_ = makeAttribute "aria-labelledby"
@@ -129,6 +144,9 @@ ariaLabelledby_ = makeAttribute "aria-labelledby"
 -- | The @aria-describedby@ attribute for svg.
 ariaDescribedby_ :: Text -> Attribute
 ariaDescribedby_ = makeAttribute "aria-describedby"
+
+ariaControls_ :: Text -> Attribute
+ariaControls_ = makeAttribute "aria-controls"
 
 -- | The @as@ attribute
 as_ :: Text -> Attribute
@@ -159,6 +177,13 @@ cellspacing_ = makeAttribute "cellspacing"
 -- | The @ng-non-bindable@ attribute
 ngNonBindable_ :: Attribute
 ngNonBindable_ = makeAttribute "ng-non-bindable" mempty
+
+patternUnits_ :: Text -> Attribute
+patternUnits_ = makeAttribute "patternUnits"
+
+
+patternunits_ :: Text -> Attribute
+patternunits_ = makeAttribute "patternunits"
 
 {- | The @hspace@ attribute
 This attribute is deprecated!
@@ -350,6 +375,9 @@ Set the text content of an element
 xText_ :: Text -> Attribute
 xText_ = makeAttribute "x-text"
 
+xPlaceholder_ :: Text -> Attribute
+xPlaceholder_ = makeAttribute "x-placeholder"
+
 {-
 <div>
   Copyright ©
@@ -434,6 +462,46 @@ xForKey_ = makeAttribute ":key"
 
 xKeyDownWindowEscape_ :: Text -> Attribute
 xKeyDownWindowEscape_ = makeAttribute "@keydown.window.escape"
+
+xKeydownEscapeStop_ :: Text -> Attribute
+xKeydownEscapeStop_ = makeAttribute "@keydown.escape.stop"
+
+xKeydownSpacePrevent_ :: Text -> Attribute
+xKeydownSpacePrevent_ = makeAttribute "@keydown.space.prevent"
+
+xKeyupSpacePrevent_ :: Text -> Attribute
+xKeyupSpacePrevent_ = makeAttribute "@keyup.space.prevent"
+
+
+xKeydownEnterPrevent_ :: Text -> Attribute
+xKeydownEnterPrevent_ = makeAttribute "@keydown.enter.prevent"
+
+xBindAriaExpanded_ :: Text -> Attribute
+xBindAriaExpanded_ = makeAttribute "x-bind:aria-expanded"
+
+xKeyDownArrowUpPrevent_ :: Text -> Attribute
+xKeyDownArrowUpPrevent_ = makeAttribute "@keydown.arrow-up.prevent"
+
+xKeyDownArrowDownPrevent_ :: Text -> Attribute
+xKeyDownArrowDownPrevent_ = makeAttribute "@keydown.arrow-down.prevent"
+
+xBindAriaActiveDescendant_ :: Text -> Attribute
+xBindAriaActiveDescendant_ = makeAttribute "x-bind:aria-activedescendant"
+
+xKeyDownTab :: Text -> Attribute
+xKeyDownTab = makeAttribute "@keydown.tab"
+
+xClass_ :: Text -> Attribute
+xClass_ = makeAttribute ":class"
+
+mouseEnter_ :: Text -> Attribute
+mouseEnter_ = makeAttribute "@mouseenter"
+
+mouseLeave_ :: Text -> Attribute
+mouseLeave_ = makeAttribute "@mouseleave"
+
+mouseMove_ :: Text -> Attribute
+mouseMove_ = makeAttribute "@mousemove"
 
 {-
 <template x-for="post in posts">

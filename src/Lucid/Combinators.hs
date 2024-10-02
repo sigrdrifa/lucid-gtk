@@ -249,7 +249,7 @@ html5 = HtmlVariant
         , "pre", "path", "progress", "q", "rp", "rt", "ruby", "samp", "script"
         , "section", "select", "small", "span", "strong", "style", "sub"
         , "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th"
-        , "thead", "time", "title", "tr", "ul", "var", "video"
+        , "thead", "time", "title", "tr", "ul", "var", "video", "x-placeholder", "defs", "pattern", "rect"
         ]
     , leafs =
         -- http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#void-elements
@@ -257,7 +257,8 @@ html5 = HtmlVariant
         , "link", "menuitem", "meta", "param", "source", "track", "wbr"
         ]
     , attributes =
-        [ "accept", "accept-charset", "accesskey", "aria-modal", "action", "alt", "async"
+        [ "accept", "accept-charset", "accesskey", "aria-modal", "aria-label",
+        "aria-controls", "aria-current", "aria-orientation", "action", "alt", "async"
         , "autocomplete", "autofocus", "autoplay", "challenge", "charset"
         , "checked", "cite", "class", "cols", "colspan", "content"
         , "contenteditable", "contextmenu", "controls", "coords", "crossorigin", "d", "data"
@@ -285,14 +286,19 @@ html5 = HtmlVariant
         , "rel", "required", "reversed", "rows", "rowspan", "sandbox", "scope"
         , "role"
         , "scoped", "seamless", "selected", "shape", "stroke", "stroke-width",
-        "stroke-linecap", "stroke-linejoin",
+        "stroke-linecap", "stroke-linejoin", "patternUnits", "patternunits",
         "size", "sizes", "span"
         , "spellcheck", "src", "srcdoc", "start", "step", "style", "subject"
         , "summary", "tabindex", "target", "title", "type", "usemap", "value"
-        , "width", "wrap", "xmlns", "x-data", "x-scope", "@keydown.window.escape", "x-text",
+        , "width", "wrap", "xmlns", "x-data", "x-scope", "@keydown.window.escape", "@keydown.escape.stop", 
+        "@keydown.space.prevent", "@keydown.enter.prevent", "@keydown.arrow-up.prevent", "@keydown.tab", "@keydown.arrow-down.prevent",
+        "@keyup.space.prevent", "x-text",
+        "x-init", "x-bind:aria-expanded", "x-bind:aria-activedescendant", "x-placeholder",
         "x-show", "x-description", "x-ref", "x-transition:enter", "x-transition:enter-start",
         "x-transition:enter-end", "x-transition:leave", "x-transition:leave-start", "x-transition:leave-end",
-        "x-transition:enter-active", "x-transition:leave-active", "x-transition:move", "x-transition:move-start", "@click.away", "@click", "@click.outside", "x-state:on", "x-state:off", "x-state-description"
+        "x-transition:enter-active", "x-transition:leave-active", "x-transition:move", 
+        "x-transition:move-start", "@click.away", "@click", "@click.outside", "x-state:on", "x-state:off", "x-state-description", ":class",
+        "@mouseenter", "@mouseleave", "@mousemove"
         ]
     , selfClosing = False
     }

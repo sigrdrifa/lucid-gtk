@@ -89,6 +89,18 @@ pattern_ = termRaw "pattern"
 rect_ :: (TermRaw arg result) => arg -> result
 rect_ = termRaw "rect"
 
+ellipse_ :: (TermRaw arg result) => arg -> result
+ellipse_ = termRaw "ellipse"
+
+radialgradient_ :: (TermRaw arg result) => arg -> result
+radialgradient_ = termRaw "radialgradient"
+
+lineargradient_ :: (TermRaw arg result) => arg -> result
+lineargradient_ = termRaw "lineargradient"
+
+stop_ :: (TermRaw arg result) => arg -> result
+stop_ = termRaw "stop"
+
 ------ Leaf elements -----------------------
 -------------------------------------------
 
@@ -119,13 +131,22 @@ gPlusone_ = with (makeElementNoEnd "g:plusone")
 ariaExpanded_ :: Text -> Attribute
 ariaExpanded_ = makeAttribute "aria-expanded"
 
+offset_ :: Text -> Attribute
+offset_ = makeAttribute "offset"
+
 -- | The @aria-haspopup@ attribute
 ariaHaspopup_ :: Text -> Attribute
 ariaHaspopup_ = makeAttribute "aria-haspopup"
 
+stopColor_ :: Text -> Attribute
+stopColor_ = makeAttribute "stop-color"
+
 -- | The @aria-hidden@ attribute
 ariaHidden_ :: Text -> Attribute
 ariaHidden_ = makeAttribute "aria-hidden"
+
+ariaChecked_ :: Text -> Attribute
+ariaChecked_ = makeAttribute "aria-checked"
 
 -- | The @aria-label@ attribute for svg.
 ariaLabel_ :: Text -> Attribute
@@ -284,6 +305,18 @@ x_ = makeAttribute "x"
 -- | The @y@ attribute.
 y_ :: Text -> Attribute
 y_ = makeAttribute "y"
+
+cx_ :: Text -> Attribute
+cx_ = makeAttribute "cx"
+
+cy_ :: Text -> Attribute
+cy_ = makeAttribute "cy"
+
+rx_ :: Text -> Attribute
+rx_ = makeAttribute "rx"
+
+ry_ :: Text -> Attribute
+ry_ = makeAttribute "ry"
 
 -- | The @xmlns:xlink@ attribute.
 xmlnsXlink_ :: Text -> Attribute

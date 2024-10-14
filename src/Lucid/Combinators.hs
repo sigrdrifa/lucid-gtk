@@ -249,7 +249,8 @@ html5 = HtmlVariant
         , "pre", "path", "progress", "q", "rp", "rt", "ruby", "samp", "script"
         , "section", "select", "small", "span", "strong", "style", "sub"
         , "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th"
-        , "thead", "time", "title", "tr", "ul", "var", "video", "x-placeholder", "defs", "pattern", "rect"
+        , "thead", "time", "title", "tr", "ul", "var", "video", "x-placeholder", "defs", "pattern", "rect", "ellipse",
+         "radialgradient", "stop", "lineargradient"
         ]
     , leafs =
         -- http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#void-elements
@@ -258,9 +259,9 @@ html5 = HtmlVariant
         ]
     , attributes =
         [ "accept", "accept-charset", "accesskey", "aria-modal", "aria-label",
-        "aria-controls", "aria-current", "aria-orientation", "action", "alt", "async"
+        "aria-controls", "aria-current", "aria-orientation", "aria-checked", "action", "alt", "async"
         , "autocomplete", "autofocus", "autoplay", "challenge", "charset"
-        , "checked", "cite", "class", "cols", "colspan", "content"
+        , "checked", "cite", "cx", "cy", "rx", "ry", "class", "cols", "colspan", "content"
         , "contenteditable", "contextmenu", "controls", "coords", "crossorigin", "d", "data"
         , "datetime", "defer", "dir", "disabled", "draggable", "enctype", "for", "fill"
         , "form", "formaction", "formenctype", "formmethod", "formnovalidate"
@@ -273,7 +274,7 @@ html5 = HtmlVariant
         , "ondblclick", "ondrag", "ondragend", "ondragenter", "ondragleave"
         , "ondragover", "ondragstart", "ondrop", "ondurationchange", "onemptied"
         , "onended", "onerror", "onfocus", "onformchange", "onforminput"
-        , "onhaschange", "oninput", "oninvalid", "onkeydown", "onkeyup"
+        , "onhaschange", "oninput", "oninvalid", "onkeydown", "onkeyup", "offset"
         , "onload", "onloadeddata", "onloadedmetadata", "onloadstart"
         , "onmessage", "onmousedown", "onmousemove", "onmouseout", "onmouseover"
         , "onmouseup", "onmousewheel", "ononline", "onpagehide", "onpageshow"
@@ -288,7 +289,7 @@ html5 = HtmlVariant
         , "scoped", "seamless", "selected", "shape", "stroke", "stroke-width",
         "stroke-linecap", "stroke-linejoin", "patternUnits", "patternunits",
         "size", "sizes", "span"
-        , "spellcheck", "src", "srcdoc", "start", "step", "style", "subject"
+        , "spellcheck", "src", "srcdoc", "start", "step", "style", "subject", "stop-color"
         , "summary", "tabindex", "target", "title", "type", "usemap", "value"
         , "width", "wrap", "xmlns", "x-data", "x-scope", "@keydown.window.escape", "@keydown.escape.stop", 
         "@keydown.space.prevent", "@keydown.enter.prevent", "@keydown.arrow-up.prevent", "@keydown.tab", "@keydown.arrow-down.prevent",

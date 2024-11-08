@@ -1,7 +1,8 @@
 # lucid-gtk
 A simple GTK UI application for converting rich html to lucid markup
 
-![image](https://github.com/user-attachments/assets/9ea0e856-12d8-44e7-af5b-12d34ea12722)
+![image](https://github.com/user-attachments/assets/be9bfc6c-32a9-4a57-b77c-8ef90563a820)
+
 
 
 ## Building from source

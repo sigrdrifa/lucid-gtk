@@ -16,6 +16,10 @@ This project requires several GTK development libraries to be on the system.
 ```
 sudo apt install libgtk-4-dev libadwaita-1-dev libgtksourceview-5-dev libgirepository1.0-dev libxml2-utils
 ```
+#### Install the Dracula gtksourceview theme
+
+Grab the awesome Dracula GTKSourceView theme .xml file from here: https://github.com/dracula/gtksourceview and copy `dracula.xml` into `~/.local/share/gtksourceview-5/styles`
+
 #### Building
 
 Make targets are provided to build lucid-gtk.

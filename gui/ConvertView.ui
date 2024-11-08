@@ -4,13 +4,6 @@
   <object class="GtkBox" id="encTopBox">
     <property name="orientation">1</property>
     <child>
-      <object class="AdwBanner" id="banner">
-        <property name="button-label" translatable="true">Cheatsheet</property>
-        <property name="title" translatable="true">Use the input on the left to convert your HTML5 code to Lucid Haskell code </property>
-        <property name="revealed">true</property>
-      </object>
-    </child>
-    <child>
       <object class="AdwClamp" id="encTopClamp">
         <property name="maximum-size">3600</property>
         <property name="tightening-threshold">200</property>
@@ -63,14 +56,6 @@
                         <property name="spacing">5</property>
                         <property name="margin-top">10</property>
                         <property name="homogeneous">true</property>
-                        <child>
-                          <object class="GtkButton" id="runConvertBtn">
-                            <property name="label">Convert Code</property>
-                            <style>
-                              <class name="success"/>
-                            </style>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -110,12 +95,6 @@
                         <property name="spacing">5</property>
                         <property name="margin-top">10</property>
                         <property name="homogeneous">true</property>
-                        <child>
-                          <object class="GtkButton" id="doCopyResult">
-                            <property name="label">Copy result to Clipboard</property>
-                            <style></style>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>

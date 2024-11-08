@@ -39,8 +39,8 @@ initMainWindow app state = do
       Adw.ApplicationWindow
       [ #application := app
       , #content := overlay
-      , #defaultWidth := 1220
-      , #defaultHeight := 800
+      , #defaultWidth := 1200
+      , #defaultHeight := 680
       ]
 
   -- instantiate sub-views
@@ -48,13 +48,26 @@ initMainWindow app state = do
 
   welcomeBox <- new Gtk.Box [#orientation := Gtk.OrientationVertical]
 
-  convertView <- initConvertView state overlay
+  convertBtn <-
+    new
+      Gtk.Button
+      [ #child
+          Adw.:=> new
+            Adw.ButtonContent
+            [ #iconName := "calendar-go-today-symbolic"
+            , #label := "_Convert"
+            , #useUnderline := True
+            ]
+      ]
+  Gtk.widgetAddCssClass convertBtn "suggested-action"
+
+  convertView <- initConvertView state convertBtn overlay
   let convViewBox = convertViewBox convertView
 
   welcomePage <-
     new
       Adw.StatusPage
-      [ #iconName := "org.gnome.Adwaita1.Demo"
+      [ #iconName := "utilities-terminal-symbolic"
       , #title := T.pack welcomeTitle
       , #description := "Convert HTML5 markup to "
           <> "valid Lucid2 Haskell code inside a GUI"
@@ -64,14 +77,14 @@ initMainWindow app state = do
     stack
     welcomePage
     (Just "welcome-page")
-    "Load"
-    "audio-x-generic"
+    "Welcome"
+    "start-here-symbolic"
   Adw.viewStackAddTitledWithIcon
     stack
     convViewBox
     (Just "convert-page")
-    "Convert"
-    "sound-wave-symbolic"
+    "Code"
+    "input-tablet-symbolic"
   viewSwitcherBar <- new Adw.ViewSwitcherBar [#stack := stack]
   viewSwitcherTitle <- new Adw.ViewSwitcherTitle [#stack := stack]
   headerBar <- new Adw.HeaderBar [#titleWidget := viewSwitcherTitle]
@@ -87,6 +100,8 @@ initMainWindow app state = do
   Gtk.menuAppendItem menuModel menuModelItemAbout
   menuBtn <- new Gtk.MenuButton [#menuModel := menuModel, #iconName := "open-menu-symbolic"]
   Adw.headerBarPackStart headerBar menuBtn
+
+  Adw.headerBarPackEnd headerBar convertBtn
   content.append headerBar
   content.append stack
   content.append viewSwitcherBar

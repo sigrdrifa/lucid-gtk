@@ -13,7 +13,7 @@ This project requires several GTK development libraries to be on the system.
 #### On Ubuntu 24.04
 
 ```
-sudo apt install libgtk-4-dev libadwaita-1-dev libgtksourceview-5-dev libgirepository1.0-dev
+sudo apt install libgtk-4-dev libadwaita-1-dev libgtksourceview-5-dev libgirepository1.0-dev libxml2-utils
 ```
 #### Building
 
